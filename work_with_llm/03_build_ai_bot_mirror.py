@@ -3,7 +3,7 @@
 """
 import streamlit as st
 
-st.title("🤖 Mirror Bot")
+st.title("AI Bot Mirror")
 
 # 创建一个会话状态变量，用于存储聊天消息
 if "messages" not in st.session_state:
@@ -13,7 +13,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-prompt = st.chat_input("Input Something...")
+prompt = st.chat_input("给AI发消息")
 if prompt:
     with st.chat_message("user"):
         st.markdown(prompt)
